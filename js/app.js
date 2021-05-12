@@ -26,47 +26,27 @@ const songInput = document.querySelector("#searchForSongInput");
 const searchButton = document.querySelector("#searchBtn");
 const displayResult = document.querySelector("#resulth2");
 const displayLyrics = document.querySelector("#displayLyrics");
-console.log(displayResult);
 
-// Denna funktion hämtar det som användaren har skrivit i input fältet, för att funktionen ska aktiveras så behöver användaren klicka på search knappen.
+// Denna funktion hämtar det som användaren har skrivit i input fältet och gör ett anrop till ett api för att sedan returneras
+// Denna funktion bör delas upp i fler mindre funktioner
 const getUserInput = () => {
   const userInput = songInput.value;
   console.log(userInput);
 
   fetch(`https://api.lyrics.ovh/v1/${userInput}`)
-    .then((response) => {
-      return response.json();
+    .then(function (response) {
+      if (response.status === 200) {
+        displayResult.innerText = `The lyrics to your search: ${userInput}`;
+        return response.json();
+      } else {
+        displayResult.innerText = `It was something wrong with your search: ${userInput}`;
+      }
     })
     .then((lyrics) => {
       console.log(lyrics);
+      songLyric = JSON.stringify(lyrics);
+      console.log("Song lyric stringified", songLyric);
+      displayLyrics.innerText = songLyric;
     });
-
-  fetch(`https://api.lyrics.ovh/v1/${userInput}`).then(function (response) {
-    if (response.status === 200) {
-      console.log("All god");
-      displayResult.innerText = "All good";
-      displayLyrics.innerText = response.json;
-    } else {
-      console.log("Not good");
-      displayResult.innerText = "It is something wrong with your search";
-    }
-  });
-
-  //   fetch(`https://api.lyrics.ovh/v1/${userInput}`);
-
-  //   fetch(`https://api.lyrics.ovh/v1/${userInput}`)
-  //     .then((lyrics) => {
-  //       console.log(lyrics);
-  //     })
-  //     .then(function (response) {
-  //       if (response.status === 200) {
-  //         console.log("All god");
-  //         displayResult.innerText = "All good";
-  //         displayLyrics.innerText = lyrics;
-  //       } else {
-  //         console.log("Not good");
-  //         displayResult.innerText = "It is something wrong with your search";
-  //       }
-  //     });
 };
 searchButton.addEventListener("click", getUserInput);

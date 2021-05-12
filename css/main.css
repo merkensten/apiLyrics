@@ -185,6 +185,19 @@ input {
   border-radius: 5px;
 }
 
+.btn {
+  border: none;
+  outline: none;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 20px;
+  width: 50%;
+  margin: 15px 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 /* Footer */
 
 .footer-container {
@@ -250,6 +263,11 @@ input {
   input {
     padding: 20px;
     font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 2rem;
+    width: 33.3%;
   }
 
   .footer-container {

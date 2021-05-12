@@ -45,7 +45,8 @@ const getUserInput = () => {
     .then((lyrics) => {
       console.log(lyrics);
       songLyric = JSON.stringify(lyrics);
-      displayLyrics.innerText = songLyric;
+      testStr = songLyric.replace(/(\r\n|\r|\n)/g, " ");
+      displayLyrics.innerText = testStr;
     });
 };
 searchButton.addEventListener("click", getUserInput);

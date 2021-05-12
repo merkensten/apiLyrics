@@ -1,9 +1,5 @@
 # Min todo-lista för detta projekt
 
-## Ta fram ett namn och en logo
+## JavaScript
 
-## Strukturera upp all html
-
-## Designa all CSS
-
-## Sedan påbörja arbetet med JavaScriptet och Api delarna
+### Det problem jag har är att jag har inte löst hur jag får JSON objektet till en sträng, det är det jag behöver lösa. Annars är det mesta ganska bra.

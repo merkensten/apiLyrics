@@ -36,7 +36,7 @@ const getUserInput = () => {
   fetch(`https://api.lyrics.ovh/v1/${userInput}`)
     .then(function (response) {
       if (response.status === 200) {
-        displayResult.innerText = `The lyrics to your search: ${userInput}`;
+        displayResult.innerText = `This is the lyrics to your search: ${userInput}`;
         return response.json();
       } else {
         displayResult.innerText = `It was something wrong with your search: ${userInput}`;
@@ -45,8 +45,15 @@ const getUserInput = () => {
     .then((lyrics) => {
       console.log(lyrics);
       songLyric = JSON.stringify(lyrics);
-      console.log("Song lyric stringified", songLyric);
       displayLyrics.innerText = songLyric;
     });
 };
 searchButton.addEventListener("click", getUserInput);
+
+//   Dålig lösning då detta inte funkar
+//   const newStr = songLyric.replace(/\r\n/g, " ");
+//   const newStrSecond = newStr.replace(/\n\n/g, " ");
+//   const newStrThird = newStrSecond.replace(/\n\n\n\n/g, " ");
+//   const newStrFourth = newStrThird.replace(/{"lyrics":"/g, " ");
+
+// {"lyrics":"Oh, sometimes\r\nI get a good feeling, yeah\r\nAnd a feeling that I never,\r\nnever, never, never had before, no no\r\nI get a good feeling, yeah\r\n[2x]"}

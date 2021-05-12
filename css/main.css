@@ -181,6 +181,8 @@ input {
   width: 100%;
   padding: 20px;
   color: var(--color-off-grey);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
 }
 
 /* Footer */

@@ -168,11 +168,11 @@ header {
   padding: 20px 0;
 }
 
-.lyrics-search {
+.lyrics-result {
   padding: 0px 0 50px 0;
 }
 
-.lyrics-search h2 {
+.lyrics-result h2 {
   margin: 10px 0;
 }
 
@@ -253,7 +253,7 @@ input {
   }
 
   .lyrics-search {
-    padding: 50px 0 100px 0;
+    padding: 50px 0 0px 0;
   }
 
   .lyrics-search h2 {

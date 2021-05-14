@@ -4,6 +4,7 @@ const form = document.querySelector("#form");
 const searchButton = document.querySelector("#searchBtn");
 const displayResult = document.querySelector("#resulth2");
 const displayLyrics = document.querySelector("#displayLyrics");
+const result = document.getElementById("result");
 console.log(songInput);
 console.log(searchButton);
 console.log(displayResult);

@@ -42,11 +42,11 @@ function showData(data) {
     <ul class="song-list">
       ${data.data
         .map(
-          (song) => `<li>
+          (song) => `<li class="li-music">
                     <div>
                         <strong>${song.artist.name}</strong> -${song.title} 
                     </div>
-                    <span data-artist="${song.artist.name}" data-songtitle="${song.title}"> get lyrics</span>
+                    <span class="get-lyrics" data-artist="${song.artist.name}" data-songtitle="${song.title}"> get lyrics</span>
                 </li>`
         )
         .join("")}

@@ -199,6 +199,24 @@ input {
   cursor: pointer;
 }
 
+.get-lyrics {
+  border: 0;
+  padding: 0;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 10px 20px;
+  margin-left: 20px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.li-music {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
 /* Footer */
 
 .footer-container {

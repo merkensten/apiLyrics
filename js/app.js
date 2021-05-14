@@ -50,11 +50,3 @@ const getUserInput = () => {
     });
 };
 searchButton.addEventListener("click", getUserInput);
-
-//   Dålig lösning då detta inte funkar
-//   const newStr = songLyric.replace(/\r\n/g, " ");
-//   const newStrSecond = newStr.replace(/\n\n/g, " ");
-//   const newStrThird = newStrSecond.replace(/\n\n\n\n/g, " ");
-//   const newStrFourth = newStrThird.replace(/{"lyrics":"/g, " ");
-
-// {"lyrics":"Oh, sometimes\r\nI get a good feeling, yeah\r\nAnd a feeling that I never,\r\nnever, never, never had before, no no\r\nI get a good feeling, yeah\r\n[2x]"}
